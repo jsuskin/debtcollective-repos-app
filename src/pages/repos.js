@@ -14,8 +14,6 @@ const Repos = () => {
     setShowModal(true)
     setSelectedRepo(repo)
   }
-  
-  let url = `https://api.github.com/users/debtcollective/repos?per_page=${window.innerWidth > 759 ? 12 : window.innerWidth > 600 ? 4 : 7}&page=${page}`
 
   const opts = {
     method: "GET",
@@ -26,7 +24,7 @@ const Repos = () => {
   }
 
   useEffect(() => {
-    fetch(url, opts)
+    fetch(`https://api.github.com/users/debtcollective/repos?per_page=${window.innerWidth > 759 ? 12 : window.innerWidth > 600 ? 4 : 7}&page=${page}`, opts)
       .then(res => res.json())
       .then(data => setRepos(data))
       .catch(console.error)
