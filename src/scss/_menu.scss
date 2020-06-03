@@ -10,6 +10,10 @@
 
     .link {
       color: $white;
+
+      .fa-icon {
+        font-size: 1.6em;
+      }
     }
   }
 }
@@ -24,7 +28,7 @@
 @media screen and (max-width: 600px) {
   .menu {
     position: fixed;
-    height: 300px;
+    height: 350px;
     right: -270px;
     transition: 1s all ease;
 
