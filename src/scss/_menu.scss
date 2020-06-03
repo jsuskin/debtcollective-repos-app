@@ -1,0 +1,46 @@
+.menu {
+  background: $darkgrey;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9em;
+
+    .link {
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    font-size: 0.888em;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    position: fixed;
+    height: 300px;
+    right: -270px;
+    transition: 1s all ease;
+
+    &.active {
+      right: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 1.3em;
+
+      li {
+        padding: 20px;
+      }
+    }
+  }
+}

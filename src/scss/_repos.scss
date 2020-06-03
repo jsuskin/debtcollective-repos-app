@@ -1,0 +1,76 @@
+.repos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  li .repo-card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid $darkgrey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 20px;
+    min-height: 75px;
+    cursor: pointer;
+
+    &:hover {
+      background: $white;
+      border: 3px solid $turquoise;
+      transition: 0.5s all ease;
+    }
+
+    * {
+      padding: 3.33px 0;
+    }
+
+    .repo-name {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+
+    .repo-url {
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+
+    .repo-contributors {
+      font-size: 0.9em;
+
+      .contributors-list {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .repos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .repo-comments-container {
+    margin: 0 10px;
+
+    .repo-comments {
+      max-height: 100px;
+      word-wrap: break-word;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .repos li .repo-card {
+    min-height: 40px;
+
+    .repo-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 320px;
+    }
+
+    .repo-url {
+      display: none;
+    }
+  }
+}

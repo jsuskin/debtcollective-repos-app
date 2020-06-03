@@ -1,0 +1,44 @@
+@import "./variables";
+@import "./header";
+@import "./hamburger-menu";
+@import "./menu";
+@import "./home";
+@import "./repos";
+@import "./modal";
+@import "./footer";
+
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+}
+
+html {
+  font-family: "Muli", sans-serif;
+}
+
+body {
+  background: $lightblue;
+}
+
+.link,
+a {
+  color: $darkgrey;
+  text-decoration: none;
+
+  &:hover {
+    color: $medgrey;
+  }
+}
+
+.active-nav-link {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section-heading {
+  font-weight: 700;
+}

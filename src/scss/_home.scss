@@ -1,0 +1,15 @@
+.home-text {
+  padding: 20px;
+
+  :not(h2) {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-text {
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+}

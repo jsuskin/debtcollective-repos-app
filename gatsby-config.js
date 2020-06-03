@@ -5,6 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Debt Collective Git Repos`,
+    description: `Debt Collective Git Repos.`,
+    author: `Joshua Suskin`,
+  },
+  plugins: [
+    `gatsby-plugin-sass`,
+  ],
 }
