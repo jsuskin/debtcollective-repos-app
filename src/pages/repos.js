@@ -13,7 +13,6 @@ const Repos = () => {
   const handleClick = repo => {
     setShowModal(true)
     setSelectedRepo(repo)
-    console.log(repo)
   }
   
   let url = `https://api.github.com/users/debtcollective/repos?per_page=${window.innerWidth > 759 ? 12 : window.innerWidth > 600 ? 4 : 7}&page=${page}`
